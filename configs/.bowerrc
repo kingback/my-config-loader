@@ -1,0 +1,7 @@
+// this is comments
+{
+  "name": "bower",
+  "dependencies": {
+    "jquery": "master"
+  }
+}
