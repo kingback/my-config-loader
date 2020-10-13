@@ -7,6 +7,7 @@ function getOptions(name, options) {
   if (!name) throw new Error('my-config-loader: namespace is undefined.');
   return Object.assign({
     name,
+    returnFileName: false,
     configFiles: null,
     packageConfig: '',
     cwd: process.cwd()

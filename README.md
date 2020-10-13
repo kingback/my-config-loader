@@ -21,6 +21,7 @@ const loadConfigFile = require('my-config-loader')('clam');
 // more options
 const loadConfigFile = require('my-config-loader')('clam', {
   cwd: process.cwd(),
+  returnFileName: false,
   packageConfig: 'clamConfig'
   configFiles: [
     'clam.json',
@@ -36,5 +37,8 @@ const config = loadConfigFile(process.cwd()); // custom cwd
 const config = loadConfigFile({ // custom config
   cwd: process.cwd(),
   packageConfig: 'myConfig'
+});
+const [config, file] = loadConfigFile({
+  returnFileName: true
 });
 ```
