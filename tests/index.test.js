@@ -18,12 +18,13 @@ test('load json file config', () => {
 
 test('load package.json config', () => {
   expect(loader('pkg')({
-    packageConfig: 'myConfig'
-  })).toEqual({
+    packageConfig: 'myConfig',
+    returnFileName: true
+  })).toEqual([{
     "my": true,
     "config": true,
     "loader": true
-  });
+  }, 'package.json']);
 });
 
 test('load rc file config', () => {

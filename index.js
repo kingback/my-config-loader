@@ -68,6 +68,6 @@ module.exports = function MyConfigLoader(name, options) {
       debug(`Error loading config file of namespace: ${options.name}`);
     }
 
-    return config;
+    return options.returnFileName ? [config, file] : config;
   }
 }
